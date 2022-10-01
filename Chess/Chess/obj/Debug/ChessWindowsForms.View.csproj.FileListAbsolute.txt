@@ -1,0 +1,13 @@
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\bin\Debug\Chess.dll.config
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\bin\Debug\Chess.dll
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\bin\Debug\Chess.pdb
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.UI.FormMainScreen.resources
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.UI.UserControlAnalysisBoard.resources
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.UI.UserControlChessBoard.resources
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.UI.FormGameScreen.resources
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.Properties.Resources.resources
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\ChessWindowsForms.View.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\Chess.dll
+C:\Users\User\Desktop\Create with Code\ChessWinForms\Chess\Chess\obj\Debug\Chess.pdb

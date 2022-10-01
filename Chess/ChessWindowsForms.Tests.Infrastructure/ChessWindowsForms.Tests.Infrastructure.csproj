@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C6BC645-C1B5-4582-B849-0474B041DC71}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>ChessWindowsForms.Tests.Infrastructure</RootNamespace>
+    <AssemblyName>ChessWindowsForms.Tests.Infrastructure</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A.cs" />
+    <Compile Include="AnalysisBoard\AnalysisBoardLogicBuilder.cs" />
+    <Compile Include="Gameplay\CommandProcessorBuilder.cs" />
+    <Compile Include="Gameplay\IPlayerBuilder.cs" />
+    <Compile Include="Pieces\ChessPieceModelBuilder.cs" />
+    <Compile Include="Pieces\ChessPieceBuilder.cs" />
+    <Compile Include="Pieces\ChessPieceMoverBuilder.cs" />
+    <Compile Include="Gameplay\IGameplayBuilder.cs" />
+    <Compile Include="Gameplay\PlayerBuilder.cs" />
+    <Compile Include="Pieces\PositionBuilder.cs" />
+    <Compile Include="TestDataBuilder.cs" />
+    <Compile Include="AnalysisBoard\IAnalysisBoardViewBuilder.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ChessWindowsForms.Controller\ChessWindowsForms.Presenter.csproj">
+      <Project>{3DB8D84D-E375-49F1-BDF6-9A98902BADBF}</Project>
+      <Name>ChessWindowsForms.Presenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ChessWindowsForms.Gameplay\ChessWindowsForms.Model.csproj">
+      <Project>{E41E096F-E46F-4D0B-B806-B36171FE5592}</Project>
+      <Name>ChessWindowsForms.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Chess\ChessWindowsForms.View.csproj">
+      <Project>{c9132904-ff76-48b7-a650-d3b21d6095b0}</Project>
+      <Name>ChessWindowsForms.View</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\Castle.Core.4.4.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="NSubstitute, Version=4.4.0.0, Culture=neutral, PublicKeyToken=92dd2e9066daa5ca, processorArchitecture=MSIL">
+      <HintPath>..\packages\NSubstitute.4.4.0\lib\net46\NSubstitute.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Chessboard\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

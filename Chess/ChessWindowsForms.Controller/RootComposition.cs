@@ -95,7 +95,7 @@ namespace ChessWindowsForms.Presenter
         private void SetupAnalysisBoard()
         {
             UserControlAnalysisBoard analysisBoardModel = new UserControlAnalysisBoard();
-            AnalysisBoardLogic analysisBoardLogic = new AnalysisBoardLogic(_gameplay, analysisBoardModel);
+            AnalysisBoardLogic analysisBoardLogic = new AnalysisBoardLogic(_gameplay);
             _analysisBoard = new AnalysisBoardFacade(analysisBoardModel, analysisBoardLogic);
         }
         private void SetupChessBoard()
@@ -103,8 +103,8 @@ namespace ChessWindowsForms.Presenter
             TableLayoutPanel panel = new TableLayoutPanel();
             ChessBoardModel chessBoardModel = new ChessBoardModel(panel);
             UserControlChessBoard userControlChessBoard = new UserControlChessBoard(_gameplay, chessBoardModel);
-            ChessBoardLogic chessBoardLogic = new ChessBoardLogic(_analysisBoard, _gameplay, _markerSpawner, userControlChessBoard);
-            _chessBoard = new ChessBoardFacade(userControlChessBoard, chessBoardLogic);
+            ChessBoardLogic chessBoardLogic = new ChessBoardLogic(_gameplay, _markerSpawner, userControlChessBoard);
+            _chessBoard = new ChessBoardFacade(_analysisBoard,userControlChessBoard, chessBoardLogic);
         }
 
         [Serializable]

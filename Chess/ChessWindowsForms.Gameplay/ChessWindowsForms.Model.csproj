@@ -50,6 +50,7 @@
     <Compile Include="UI\AnalysisBoardLogic.cs" />
     <Compile Include="Contracts\IChessPiece.cs" />
     <Compile Include="UI\ChessBoardLogic.cs" />
+    <Compile Include="Contracts\IAnalysisBoardM.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />

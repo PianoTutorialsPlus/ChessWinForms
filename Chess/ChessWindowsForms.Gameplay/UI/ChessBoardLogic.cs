@@ -1,26 +1,26 @@
 ﻿using ChessWindowsForms.Model.Contracts;
 using ChessWindowsForms.View.Contracts;
 using ChessWindowsForms.View.UI;
+using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace ChessWindowsForms.Model.UI
 {
-    public class ChessBoardLogic
+    public class ChessBoardLogic 
     {
         private IGameplay _gameplay;
         private Queue<IPlayer> _players => _gameplay.Players;
-        private IAnalysisBoard _analyisBoard;
         private UserControlChessBoard _userControlChessBoard;
         private IMarkerSpawner _markerSpawner;
 
+        public event Action<IChessPiece> UpdateMove;
+
         public ChessBoardLogic(
-            IAnalysisBoard analysisBoard,
             IGameplay gameplay,
             IMarkerSpawner spawner,
             UserControlChessBoard userControlChessBoard)
         {
-            _analyisBoard = analysisBoard;
             _markerSpawner = spawner;
             _gameplay = gameplay;
             _userControlChessBoard = userControlChessBoard;
@@ -67,7 +67,7 @@ namespace ChessWindowsForms.Model.UI
             if (chessPiece.HasMoved)
             {
                 _userControlChessBoard.AttachChessPieceToBoard(panelPosition.Column, panelPosition.Row, chessPiece);
-                _analyisBoard.UpdateMove(chessPiece);
+                UpdateMove.Invoke(chessPiece);
                 _gameplay.EndTurn();
             }
         }

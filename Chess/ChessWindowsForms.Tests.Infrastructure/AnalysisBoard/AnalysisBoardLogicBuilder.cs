@@ -30,7 +30,7 @@ namespace ChessWindowsForms.Tests.Infrastructure
 
         public override AnalysisBoardLogic Build()
         {
-            return new AnalysisBoardLogic(_gameplay, _view);
+            return new AnalysisBoardLogic(_gameplay);
         }
     }
 }

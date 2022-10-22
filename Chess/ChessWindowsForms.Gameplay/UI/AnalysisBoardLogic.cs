@@ -1,23 +1,24 @@
 ﻿using ChessWindowsForms.Model.Contracts;
 using ChessWindowsForms.View.Contracts;
+using System;
 using System.Linq;
 
 namespace ChessWindowsForms.Model.UI
 {
-    public class AnalysisBoardLogic
+    public class AnalysisBoardLogic : IAnalysisBoardM
     {
         private int _number = 1;
         private string _whiteTurn;
         private string _blackTurn;
         private IGameplay _gameplay;
-        private IAnalysisBoardView _analysisBoard;
+
+        public event Action OnRemoveEntry;
+        public event Action<string[]> OnAddEntry;
 
         public AnalysisBoardLogic(
-            IGameplay gameplay,
-            IAnalysisBoardView analysisBoard)
+            IGameplay gameplay)
         {
             _gameplay = gameplay;
-            _analysisBoard = analysisBoard;
         }
 
         public void UpdateMove(IChessPiece piece)
@@ -34,12 +35,12 @@ namespace ChessWindowsForms.Model.UI
                 number = _number++.ToString();
                 _blackTurn = GetTurnInformation(piece);
 
-                _analysisBoard.RemoveEntry();
+                OnRemoveEntry.Invoke();
             }
 
             string[] turnData = { number, _whiteTurn, _blackTurn };
 
-            _analysisBoard.AddEntry(turnData);
+            OnAddEntry?.Invoke(turnData);
         }
         public string GetTurnInformation(IChessPiece piece)
         {

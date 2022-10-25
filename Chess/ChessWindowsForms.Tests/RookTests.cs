@@ -64,24 +64,24 @@ namespace ChessWindowseForms.Tests
                 Assert.IsFalse(piece.HasMoved);
             }
         }
-        //public class TheValidPositionsMethod : RookTests
-        //{
-        //    [Test]
-        //    public void Given_StartPos_At_0_0_When_Rook_Move_Behind_Position_With_Piece_Then_Piece_Has_Not_Moved()
-        //    {
-        //        var startPos = new Position(0, 0);
-        //        var piece = GetRook(startPos.Row, startPos.Column);
-        //        var piece2 = GetRook(1, 0);
-        //        var pieces = new object[] { piece, piece2 };
-        //        var player = GetPlayer(pieces);
+        public class TheValidPositionsMethod : RookTests
+        {
+           [Test]
+           public void Given_StartPos_At_0_0_When_Rook_Move_Behind_Position_With_Piece_Then_Piece_Has_Not_Moved()
+           {
+               var startPos = new Position(0, 0);
+               var piece = GetRook(startPos.Row, startPos.Column);
+               var piece2 = GetRook(1, 0);
+               var pieces = new object[] { piece, piece2 };
+               var player = GetPlayer(pieces);
 
-        //        piece.PossiblePositions();
-        //        var endPos = startPos + new Position(2, 0);
+               piece.PossiblePositions();
+               var endPos = startPos + new Position(2, 0);
 
-        //        piece.MoveTo(endPos);
+               piece.MoveTo(endPos);
 
-        //        Assert.IsFalse(piece.HasMoved);
-        //    }
-        //}
+               Assert.IsFalse(piece.HasMoved);
+           }
+        }
     }
 }

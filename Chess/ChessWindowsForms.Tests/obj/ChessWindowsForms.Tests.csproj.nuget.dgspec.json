@@ -1,0 +1,163 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests\\ChessWindowsForms.Tests.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj",
+        "projectName": "ChessWindowsForms.Presenter",
+        "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj",
+        "projectName": "ChessWindowsForms.Model",
+        "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests.Infrastructure\\ChessWindowsForms.Tests.Infrastructure.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests.Infrastructure\\ChessWindowsForms.Tests.Infrastructure.csproj",
+        "projectName": "ChessWindowsForms.Tests.Infrastructure",
+        "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests.Infrastructure\\ChessWindowsForms.Tests.Infrastructure.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    },
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests\\ChessWindowsForms.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests\\ChessWindowsForms.Tests.csproj",
+        "projectName": "ChessWindowsForms.Tests",
+        "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests\\ChessWindowsForms.Tests.csproj",
+        "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "targetAlias": "net48",
+            "projectReferences": {
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Controller\\ChessWindowsForms.Presenter.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Gameplay\\ChessWindowsForms.Model.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests.Infrastructure\\ChessWindowsForms.Tests.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\ChessWindowsForms.Tests.Infrastructure\\ChessWindowsForms.Tests.Infrastructure.csproj"
+              },
+              "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj": {
+                "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "targetAlias": "net48",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "NSubstitute": {
+              "target": "Package",
+              "version": "[4.4.0, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj",
+        "projectName": "ChessWindowsForms.View",
+        "projectPath": "C:\\Users\\User\\Desktop\\Create with Code\\ChessWinForms\\Chess\\Chess\\ChessWindowsForms.View.csproj",
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {}
+      }
+    }
+  }
+}

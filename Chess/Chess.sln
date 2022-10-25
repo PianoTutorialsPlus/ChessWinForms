@@ -5,13 +5,13 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessWindowsForms.View", "Chess\ChessWindowsForms.View.csproj", "{C9132904-FF76-48B7-A650-D3B21D6095B0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessWindowseForms.Tests", "ChessWindowseForms.Tests\ChessWindowseForms.Tests.csproj", "{13F8793D-2322-4199-8CBD-942805011868}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessWindowsForms.Tests.Infrastructure", "ChessWindowsForms.Tests.Infrastructure\ChessWindowsForms.Tests.Infrastructure.csproj", "{2C6BC645-C1B5-4582-B849-0474B041DC71}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessWindowsForms.Model", "ChessWindowsForms.Gameplay\ChessWindowsForms.Model.csproj", "{E41E096F-E46F-4D0B-B806-B36171FE5592}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChessWindowsForms.Presenter", "ChessWindowsForms.Controller\ChessWindowsForms.Presenter.csproj", "{3DB8D84D-E375-49F1-BDF6-9A98902BADBF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChessWindowsForms.Tests", "ChessWindowsForms.Tests\ChessWindowsForms.Tests.csproj", "{17F1CBE6-FF6A-4046-888B-E3C8F17F37EE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{C9132904-FF76-48B7-A650-D3B21D6095B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9132904-FF76-48B7-A650-D3B21D6095B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9132904-FF76-48B7-A650-D3B21D6095B0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{13F8793D-2322-4199-8CBD-942805011868}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{13F8793D-2322-4199-8CBD-942805011868}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{13F8793D-2322-4199-8CBD-942805011868}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{13F8793D-2322-4199-8CBD-942805011868}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2C6BC645-C1B5-4582-B849-0474B041DC71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2C6BC645-C1B5-4582-B849-0474B041DC71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C6BC645-C1B5-4582-B849-0474B041DC71}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{3DB8D84D-E375-49F1-BDF6-9A98902BADBF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3DB8D84D-E375-49F1-BDF6-9A98902BADBF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3DB8D84D-E375-49F1-BDF6-9A98902BADBF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{17F1CBE6-FF6A-4046-888B-E3C8F17F37EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17F1CBE6-FF6A-4046-888B-E3C8F17F37EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17F1CBE6-FF6A-4046-888B-E3C8F17F37EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17F1CBE6-FF6A-4046-888B-E3C8F17F37EE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

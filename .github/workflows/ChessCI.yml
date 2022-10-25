@@ -39,6 +39,6 @@ jobs:
     - name: Execute Unit Tests
       uses: microsoft/vstest-action@v1.0.0
       with:
-        testAssembly: $env:Test_Assembly
-        searchFolder: $env:Test_Project_Folder
+        testAssembly: ChessWindowsForms.Tests.dll
+        searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
         runInParallel: true

@@ -36,12 +36,12 @@ jobs:
     - name: Run the Solution
       run: msbuild $env:Solution_Name
 
-    - name: Execute Unit Tests
-      uses: microsoft/vstest-action@v1.0.0
-      with:
-        testAssembly: ChessWindowsForms.Tests.dll
-        searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
-        runInParallel: true
+    # - name: Execute Unit Tests
+    #   uses: microsoft/vstest-action@v1.0.0
+    #   with:
+    #     testAssembly: ChessWindowsForms.Tests.dll
+    #     searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
+    #     runInParallel: true
 
     - uses: actions/upload-artifact@v3
       with:

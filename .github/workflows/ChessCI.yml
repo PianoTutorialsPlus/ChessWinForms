@@ -24,8 +24,11 @@ jobs:
       with:
         fetch-depth: 0
 
+    - run: dir
+
     - name: Setup MSBuild
-      uses: microsoft/setup-msbuild@v1.1.3
+      uses: microsoft/
+      setup-msbuild@v1.1.3
       
     - name: Setup NuGet
       uses: NuGet/setup-nuget@v1.1.1
@@ -33,8 +36,8 @@ jobs:
     - name: Restore Nuget Packages
       run: nuget restore $env:Solution_Name
     
-    # - name: Run the Solution
-    #   run: msbuild $env:Solution_Name
+    - name: Run the Solution
+      run: msbuild $env:Solution_Name
 
     - name: Execute Unit Tests
       uses: microsoft/vstest-action@v1.0.0

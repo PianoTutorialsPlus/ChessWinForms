@@ -104,49 +104,49 @@ namespace ChessWindowseForms.Tests
                 Assert.IsFalse(piece.HasMoved);
             }
         }
-        public class TheValidPositionsMethod : KingTests
-        {
-           [Test]
-           public void Given_StartPos_At_0_0_When_2nd_Piece_Is_in_MoveRange_Then_Count_Is_2()
-           {
-               var piece = GetKing(0, 0);
-               var piece2 = GetKing(1, 1);
-               var pieces = new object[] {piece , piece2};
-               var player = GetPlayer(pieces);
+        //public class TheValidPositionsMethod : KingTests
+        //{
+        //   [Test]
+        //   public void Given_StartPos_At_0_0_When_2nd_Piece_Is_in_MoveRange_Then_Count_Is_2()
+        //   {
+        //       var piece = GetKing(0, 0);
+        //       var piece2 = GetKing(1, 1);
+        //       var pieces = new object[] {piece , piece2};
+        //       var player = GetPlayer(pieces);
 
-               var positions = piece.PossiblePositions();
-               Assert.AreEqual(2, positions.Count);
-           }
-           [Test]
-           public void Given_StartPos_At_0_0_When_Black_Piece_Is_in_MoveRange_Then_Count_Is_3()
-           {
-               var piece = GetKing(0, 0);
-               var pieces = new object[] {piece};
-               GetKing(1, 1,Color.Black);
-               var player = GetPlayer(pieces);
+        //       var positions = piece.PossiblePositions();
+        //       Assert.AreEqual(2, positions.Count);
+        //   }
+        //   [Test]
+        //   public void Given_StartPos_At_0_0_When_Black_Piece_Is_in_MoveRange_Then_Count_Is_3()
+        //   {
+        //       var piece = GetKing(0, 0);
+        //       var pieces = new object[] {piece};
+        //       GetKing(1, 1,Color.Black);
+        //       var player = GetPlayer(pieces);
 
-               var positions = piece.PossiblePositions();
+        //       var positions = piece.PossiblePositions();
 
-               Assert.AreEqual(3, positions.Count);
-           }
-           [Test]
-           public void Given_StartPos_At_0_0_When_King_MoveTo_Position_With_Piece_Then_Piece_Has_Not_Moved()
-           {
-               var startPos = new Position(0, 0);
-               var piece = GetKing(startPos.Row, startPos.Column);
-               var piece2 = GetKing(1, 1);
-               var pieces = new object[] { piece, piece2 };
-               var player = GetPlayer(pieces);
+        //       Assert.AreEqual(3, positions.Count);
+        //   }
+        //   [Test]
+        //   public void Given_StartPos_At_0_0_When_King_MoveTo_Position_With_Piece_Then_Piece_Has_Not_Moved()
+        //   {
+        //       var startPos = new Position(0, 0);
+        //       var piece = GetKing(startPos.Row, startPos.Column);
+        //       var piece2 = GetKing(1, 1);
+        //       var pieces = new object[] { piece, piece2 };
+        //       var player = GetPlayer(pieces);
 
-               //piece.ValidPositions(player.ChessPieceList);
-               piece.PossiblePositions();
-               var endPos = startPos + new Position(1, 1);
+        //       //piece.ValidPositions(player.ChessPieceList);
+        //       piece.PossiblePositions();
+        //       var endPos = startPos + new Position(1, 1);
 
-               piece.MoveTo(endPos);
+        //       piece.MoveTo(endPos);
 
-               Assert.IsFalse(piece.HasMoved);
-           }
+        //       Assert.IsFalse(piece.HasMoved);
+        //   }
 
-        }
+        //}
     }
 }

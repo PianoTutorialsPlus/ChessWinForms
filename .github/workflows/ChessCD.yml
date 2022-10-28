@@ -1,0 +1,93 @@
+name: CD
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build-project:
+    name: Build application
+    runs-on: windows-latest  # For a list of available runner types, refer to
+                             # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
+
+    env:
+      Solution_Name: Chess\Chess.sln                                            # Replace with your solution name, i.e. MyWpfApp.sln.
+      Test_Assembly: ChessWindowsForms.Tests.dll
+      Test_Project_Folder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1.1.3
+      
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.1.1
+      
+    - name: Restore Nuget Packages
+      run: nuget restore $env:Solution_Name
+
+    - name: Run the Solution
+      run: msbuild $env:Solution_Name
+
+    - name: Execute Unit Tests
+      uses: microsoft/vstest-action@v1.0.0
+      with:
+        testAssembly: ChessWindowsForms.Tests.dll
+        searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
+        runInParallel: true
+
+    - name: Pulish the Solution
+      run: msbuild $env:Solution_Name /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v1.0.0
+      with:
+        name: my-artifact
+        path: Chess/ChessWindowsForms.Controller/bin/Release/
+        retention-days: 0
+
+
+  release-project:
+    name: Release to Github
+    runs-on: ubuntu-latest
+    needs: build-project
+
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Download Content
+      uses: actions/download-artifact@v2
+      with:
+        name: my-artifact
+        path: ./download
+      
+    - name: Archive site Content
+      uses: thedoctor0/zip-release@master
+      with:
+        path: ./download
+        filename: release.zip
+
+    - name: Create Github Release
+      id: create-new-release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        tag_name: ${{ github.run_number }}
+        release_name: Release ${{ github.run_number }}
+
+    - name: Upload release asset
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create-new-release.outputs.upload_url }}
+        asset_path: ./release.zip
+        asset_name: ChessWinForms-V${{ github.run_number }}.zip
+        asset_content_type: application/zip
+

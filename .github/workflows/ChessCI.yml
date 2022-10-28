@@ -8,8 +8,8 @@ on:
 
 jobs:
 
-  build:
-
+  build-project:
+    name: Build application
     runs-on: windows-latest  # For a list of available runner types, refer to
                              # https://help.github.com/en/actions/reference/workflow-syntax-for-github-actions#jobsjob_idruns-on
 
@@ -36,30 +36,9 @@ jobs:
     - name: Run the Solution
       run: msbuild $env:Solution_Name
 
-    # - name: Execute Unit Tests
-    #   uses: microsoft/vstest-action@v1.0.0
-    #   with:
-    #     testAssembly: ChessWindowsForms.Tests.dll
-    #     searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
-    #     runInParallel: true
-
-    # - uses: actions/upload-artifact@v3
-    #   with:
-    #     name: my-artifact
-    #     path: path/to/artifact/
-
-  release-project:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: Create Release Folder
-      run: rsync -arv --exclude='.git/' --exclude='.github/' --exclude='.gitignore' . ./release
-    - name: Switch to Release Folder
-      run: |
-        cd release
-        ls -la
-    - name: Bump version and push tag
-      uses: anothrNick/github-tag-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.TOKEN }}
-        REPO_OWNER: keithweaver
+    - name: Execute Unit Tests
+      uses: microsoft/vstest-action@v1.0.0
+      with:
+        testAssembly: ChessWindowsForms.Tests.dll
+        searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
+        runInParallel: true

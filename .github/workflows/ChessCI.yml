@@ -41,13 +41,3 @@ jobs:
         testAssembly: ChessWindowsForms.Tests.dll
         searchFolder: .\Chess\ChessWindowsForms.Tests\bin\Debug\net48\
         runInParallel: true
-
-    - name: Pulish the Solution
-      run: msbuild $env:Solution_Name /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
-
-    - name: Upload artifact
-      uses: actions/upload-artifact@v1.0.0
-      with:
-        name: my-artifact
-        path: Chess/ChessWindowsForms.Controller/bin/Release/
-        retention-days: 0
